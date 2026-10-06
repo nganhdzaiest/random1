@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quay Số Ngẫu Nhiên</title>
+</head>
+<body>
+  <h2>QUAY SỐ NGẪU NHIÊN</h2>
+  <p>
+    Từ: <input type="number" id="min" value="1"> 
+    Đến: <input type="number" id="max" value="100">
+  </p>
+  <button onclick="randomNumber()">Quay Số</button>
+  <div id="result">0</div>
+
+  <script>
+    function randomNumber() {
+      let min = parseInt(document.getElementById('min').value);
+      let max = parseInt(document.getElementById('max').value);
+      let num = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById('result').innerText = num;
+    }
+  </script>
+</body>
+</html>
